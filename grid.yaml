@@ -8,31 +8,24 @@ services:
   chrome:
     image: selenium/node-chromium:4.27
     shm_size: '2gb'
-   
     depends_on:
       - hub
     deploy:
       replicas: 1
-    env_file:
-      - .env
-  # Uncomment the following lines to enable Chrome with GPU support
+    env_file: .env
   firefox:
     image: selenium/node-firefox:4.27
     shm_size: '2gb'
-    
     depends_on:
       - hub
     deploy:
       replicas: 1
-    env_file:
-      - .env
+    env_file: .env
   edge:
     image: selenium/node-edge:4.27
     shm_size: '2gb'
-    
     depends_on:
       - hub
     deploy:
       replicas: 1
-    env_file:
-      - .env
+    env_file: .env
