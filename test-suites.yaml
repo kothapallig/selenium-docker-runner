@@ -8,7 +8,7 @@ services:
       - THREAD_COUNT=3
       - TEST_SUITE=flight-reservation.xml
     volumes:
-      - .output/flight-portal:/home/selenium-docker/test-output
+      - ./output/flight-portal:/home/selenium-docker/test-output
           
   
   
