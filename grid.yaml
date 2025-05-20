@@ -1,6 +1,10 @@
 services:
   hub:
     image: selenium/hub:4.27
+    ports:
+      - "4442:4442"
+      - "4443:4443"
+      - "4444:4444"
   chrome:
     image: selenium/node-chromium:4.27
     shm_size: '2gb'
