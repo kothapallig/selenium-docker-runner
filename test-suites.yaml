@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  Flight-portal:
+    image: gkdocker/selenium
+    environment:
+      - BROWSER=chrome
+      - HUB_HOST=hub
+      - THREAD_COUNT=3
+      - TEST_SUITE=flight-reservation.xml
+    volumes:
+      - .output/flight-portal:/home/selenium-docker/test-output
+          
+  
+  
+  
+    
