@@ -3,7 +3,8 @@ pipeline{
     stages {
         stage('Start Selenium Grid') {
             steps {
-                sh 'docker-compose -f grid.yaml up -d'
+                sh 'docker-compose -f grid.yaml down --remove-orphans'
+                sh 'docker-compose -f grid.yaml up -d --build'
             }
         }
         stage('Start Running Test Suite') {
