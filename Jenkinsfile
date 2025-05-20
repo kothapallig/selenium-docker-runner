@@ -9,7 +9,8 @@ pipeline{
         }
         stage('Start Running Test Suite') {
             steps {
-                sh 'docker-compose -f test-suites.yaml up -d'
+                sh 'docker-compose -f test-suites.yaml down --remove-orphans'
+                sh 'docker-compose -f test-suites.yaml up -d --build'
             }
             
         }     
